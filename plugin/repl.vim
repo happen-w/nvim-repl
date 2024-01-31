@@ -89,8 +89,8 @@ endfunction
 "if !s:cmd_exists('ReplClose')
 "  command! ReplClose call repl#close()
 "endif
-if !s:cmd_exists(':Repl')
-  command! ReplToggle call repl#toggle()
+if !s:cmd_exists(':ReplToggle')
+  command! Repl call repl#toggle()
 endif
 if !s:cmd_exists(':ReplRunCell')
   command! ReplRunCell call repl#sendcell()
