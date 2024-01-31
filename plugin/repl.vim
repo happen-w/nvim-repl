@@ -80,16 +80,16 @@ endfunction
 
 " Commands
 
+"if !s:cmd_exists(':Repl')
+"  command! -nargs=* -complete=shellcmd Repl call repl#open(<f-args>)
+"endif
+"if !s:cmd_exists(':ReplOpen')
+"  command! -nargs=* -complete=shellcmd ReplOpen call repl#open(<f-args>)
+"endif
+"if !s:cmd_exists('ReplClose')
+"  command! ReplClose call repl#close()
+"endif
 if !s:cmd_exists(':Repl')
-  command! -nargs=* -complete=shellcmd Repl call repl#open(<f-args>)
-endif
-if !s:cmd_exists(':ReplOpen')
-  command! -nargs=* -complete=shellcmd ReplOpen call repl#open(<f-args>)
-endif
-if !s:cmd_exists('ReplClose')
-  command! ReplClose call repl#close()
-endif
-if !s:cmd_exists(':ReplToggle')
   command! ReplToggle call repl#toggle()
 endif
 if !s:cmd_exists(':ReplRunCell')
